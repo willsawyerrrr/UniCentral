@@ -4,17 +4,28 @@
         <title>UniCentral | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/jquery-3.6.0.min.js"></script>
-        <script src="js/script.js"></script>
+        <script src="js/jquery-3.6.0.min.js"hidden></script>
+        <script src="js/menu.js"></script>
     </head>
     <body>
         <header>
             <a href="index.html" id="logo">UniCentral</a>
+            <a href="planners.html" class="menu">Planners</a>
+            <a href="resources.html" class="menu">Resources</a>
+            <a href="grades.html" class="menu">Grades</a>
+            <a href="account.html" id="account" class="menu"><img src="images/account.jpg"></a>
+            <a onclick="toggleDropdown()" id="menu"><img src="images/menu.png"></a>
+        </header>
+        <div id="dropdown">
             <a href="planners.html">Planners</a>
             <a href="resources.html">Resources</a>
             <a href="grades.html">Grades</a>
-            <a href="account.html" id="account">Account</a>
-        </header>
+            <a href="account.html">Account</a>
+        </div>
+
+        <!-- TODO: Fix height of account/menu image container -->
+        <!-- TODO: Implement path -->
+        <!-- TODO: Fix footer #other text -->
 
         <!-- Body content -->
         <br><br><br><br><br><br><br><br><br><br>
@@ -29,10 +40,10 @@
                 <a href="improvement.html">Suggest an Improvement</a>
             </nav>
             <div id="social">
-                <a href="https://www.linkedin.com/in/willsawyerrrr"><img src="images/linkedin.png"></a>
-                <a href="https://github.com/willsawyerrrr"><img src="images/github.png"></a>
-                <a href="https://www.facebook.com/willsawyerrrr"><img src="images/facebook.png"></a>
-                <a href="https://twitter.com/willsawyerrrr"><img src="images/twitter.png"></a>
+                <a href="https://www.linkedin.com/in/willsawyerrrr" target="new"><img src="images/linkedin.png"></a>
+                <a href="https://github.com/willsawyerrrr" target="new"><img src="images/github.png"></a>
+                <a href="https://www.facebook.com/willsawyerrrr" target="new"><img src="images/facebook.png"></a>
+                <a href="https://twitter.com/willsawyerrrr" target="new"><img src="images/twitter.png"></a>
             </ul>
         </footer>
     </body>
