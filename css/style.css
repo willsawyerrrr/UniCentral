@@ -104,8 +104,8 @@ footer {
 #other {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
-    justify-content: space-between;
+    row-gap: 20px;
+    justify-content: space-around;
     flex-direction: row;
     height: 100%;
     margin-left: 2em;
@@ -115,9 +115,6 @@ footer {
     color: black;
     align-self: center;
     width: 50%;
-}
-
-#other a {
     text-decoration: none;
 }
 
