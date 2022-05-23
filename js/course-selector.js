@@ -39,7 +39,7 @@ function programSelected() {
         none.value = "None";
         major1.appendChild(none);
 
-        for(let major of Program.compScMajors) {
+        for(let major of majors) {
             let option = document.createElement("option");
             option.innerText = major;
             option.value = major;
@@ -84,14 +84,14 @@ function firstMajorSelected() {
         none.value = "None";
         major2.appendChild(none);
 
-        let majors = JSON.parse(JSON.stringify(Program.compScMajors));
+        let restricted = JSON.parse(JSON.stringify(majors));
         let i;
-        for (i = 0; i < majors.length; i++) {
-            if (majors[i] == input) break;
+        for (i = 0; i < restricted.length; i++) {
+            if (restricted[i] == input) break;
         }
-        majors.splice(i, 1);
+        restricted.splice(i, 1);
 
-        for(let major of majors) {
+        for(let major of restricted) {
             let option = document.createElement("option");
             option.value = major;
             option.innerText = major;

@@ -13,14 +13,6 @@ class Program {
         new Program("Bachelor of Mathematics", 2460, 48)
     ];
 
-    static compScMajors = [
-        "Cyber Security",
-        "Data Science",
-        "Machine Learning",
-        "Programming Languages",
-        "Scientific Computing"
-    ];
-
     constructor(name, number, units) {
         this.name = name;
         this.number = number;
