@@ -31,5 +31,17 @@ function setPath() {
 }
 
 function cleanSubdir(subdir) {
-    return subdir;
+    let words = subdir.split("-");
+    words = words.map(word => {
+        return word.charAt(0).toUpperCase() + word.substring(1);
+    });
+
+    for (let i = 0; i < words.length; i++) {
+        let index = words[i].indexOf(".html");
+        if (index > -1) {
+            words[i] = words[i].substring(0, index);
+        }
+    }
+
+    return words.join(" ");
 }

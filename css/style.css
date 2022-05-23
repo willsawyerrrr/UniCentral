@@ -94,7 +94,7 @@ header > a:hover {
 
 /* Beginning of path elements. */
 #path {
-    width: 15%;
+    width: max-content;
     display: flex;
     flex-direction: row;
     justify-content: start;
