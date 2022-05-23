@@ -131,14 +131,14 @@ footer {
     justify-content: space-around;
     flex-direction: row;
     height: 100%;
-    margin-left: 2em;
+    margin-left: 5em;
+    padding-bottom: 1em;
 }
 
 #other > * {
     color: black;
     align-self: center;
     width: 50%;
-    vertical-align: middle;
     text-decoration: none;
 }
 
@@ -154,15 +154,16 @@ footer {
     flex-wrap: nowrap;
     align-items: center;
     height: 100%;
+    margin-right: 3em;
 }
 
 #social a {
     height: 60%;
-    margin: 2em;
+    margin: 3em 2em;
 }
 
 #social img {
-    max-height: 100px;
+    max-height: 75px;
     max-width: 20vw;
     border-radius: 20%;
 }
