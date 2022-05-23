@@ -1,4 +1,4 @@
-onload=setPath;
+addLoadEvent(setPath);
 
 function setPath() {
     var path = document.getElementById("path");
