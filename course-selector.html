@@ -4,9 +4,13 @@
         <title>UniCentral | Home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/course-selector.css">
         <script src="js/jquery-3.6.0.min.js"hidden></script>
+        <script src="js/onload.js"></script>
         <script src="js/menu.js"></script>
         <script src="js/path.js"></script>
+        <script src="js/program.js"></script>
+        <script src="js/course-selector.js"></script>
     </head>
     <body>
         <header>
@@ -17,7 +21,6 @@
             <a href="account.html" id="account" class="menu"><img src="images/account.jpg" alt="Account icon"></a>
             <a onclick="toggleDropdown()" id="menu"><img src="images/menu.png" alt="Menu icon"></a>
         </header>
-
         <div id="dropdown">
             <a href="planners.html">Planners</a>
             <a href="resources.html">Resources</a>
@@ -28,13 +31,21 @@
         <div id="path"></div>
 
         <div id="content">
-            <a href="course-selector.html">Course selectors</a>
-        </div>
+            <div id="program-selector">
+                <select id="program" onchange="programSelected()">
+                    <option selected disabled hidden>Select a Program</option>
+                </select>
+            </div>
+            
+            <div id="info">
+                <p>Unit Requirement:</p>
+                <p id="units">Select a program first...</p>
+                <p>Full-Time Duration:</p>
+                <p id="duration">Select a program first...</p>
+            </div>
 
-        <!-- Body content -->
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
+            <div id="courses"></div>
+        </div>
 
         <footer>
             <nav id="other">

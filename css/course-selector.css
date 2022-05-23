@@ -1,0 +1,51 @@
+/* Beginning of program selector elements. */
+ #content {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 90%;
+}
+
+#program-selector, #info {
+    flex-basis: 50%;
+}
+
+#program-selector input,
+#program-selector select {
+    border: 2px solid lightgrey;
+    color: black;
+    border-radius: 2px;
+    width: 90%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+#program-selector input:first-child {
+    margin-top: 0;
+}
+
+#program-selector input:last-child {
+    margin-bottom: 0;
+}
+
+#program-selector input:focused {
+    border: 10px solid lightgrey;
+}
+
+#info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+#info p {
+    flex-grow: 0;
+    flex-basis: 50%;
+}
+/* End of program selector elements. */
