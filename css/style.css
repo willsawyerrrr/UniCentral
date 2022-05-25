@@ -23,7 +23,7 @@ header > a {
     font-variant: small-caps;
     display: block;
     min-width: 10%;
-    padding: 0.75em 1.5em;
+    padding: 1em 1.5em;
     margin: 0.5em -1.5em 0.5em 0.5em;
     clip-path: polygon(1.5em 0, 100% 0, calc(100% - 1.5em) 100%, 0 100%);
 }
@@ -44,7 +44,8 @@ header > a:hover {
 }
 
 #logo {
-    padding-left: 0.5em;
+    padding-left: 1em;
+    padding-right: 2em;
     clip-path: polygon(0 0, 100% 0, calc(100% - 1.5em) 100%, 0 100%);
 }
 
