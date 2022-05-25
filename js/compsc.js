@@ -1,3 +1,4 @@
+/* List of BCompSc majors. */
 const majors = [
     "Cyber Security",
     "Data Science",
@@ -6,6 +7,7 @@ const majors = [
     "Scientific Computing"
 ];
 
+/* List of BCompSc core courses. */
 const core = [
     {"code": "COMP2048", "name": "Theory of Computing"},
     {"code": "COMP3596", "name": "Algorithms & Data Structures"},
@@ -17,6 +19,7 @@ const core = [
     {"code": "STAT1201", "name": "Analysis of Scientific Data"}
 ];
 
+/* List of Cyber Security major courses. */
 const cyber = [
     {"code": "CRIM1000", "name": "Introduction to Criminology"},
     {"code": "DECO2500", "name": "Human-Computer Interaction"},
@@ -28,6 +31,7 @@ const cyber = [
     {"code": "DECO3801", "name": "Design Computing Stuido 3 - Build"}
 ];
 
+/* List of Data Science major courses. */
 const data = [
     {"code": "COMP4702", "name": "Machine Learning"},
     {"code": "DATA2001", "name": "Introduction to Data Science"},
@@ -39,6 +43,7 @@ const data = [
     {"code": "STAT2004", "name": "Statistic Modelling & Analysis"}
 ];
 
+/* List of Machine Learning major courses. */
 const machine = [
     {"code": "COMP3702", "name": "Artificial Intelligence"},
     {"code": "COMP3710", "name": "Pattern Recognition and Analysis"},
@@ -50,6 +55,7 @@ const machine = [
     {"code": "STAT3006", "name": "Statistical Learning"}
 ];
 
+/* List of Programming Languages major courses. */
 const programming = [
     {"code": "INFS2200", "name": "Relational Database Systems"},
     {"code": "COMP2140", "name": "Web/Mobile Programming"},
@@ -61,6 +67,7 @@ const programming = [
     {"code": "DECO3801", "name": "Design Computing Studio 3 - Build"}
 ];
 
+/* List of Scientific Computing major courses. */
 const scientific = [
     {"code": "COSC2500", "name": "Numerical Methods in Computational Science"},
     {"code": "COSC3000", "name": "Visualization, Computer Graphics & Data Analysis"},

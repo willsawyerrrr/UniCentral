@@ -129,6 +129,7 @@ function firstMajorSelected() {
     }
 }
 
+/* Show core courses for the given program. */
 function showCore(program) {
     if (program.number != 2451) return;
 
@@ -137,6 +138,7 @@ function showCore(program) {
     }
 }
 
+/* Show major courses for the selected majors. */
 function showMajor(majorNum = 2) {
     let majorId = (majorNum == 1) ? "major1" : "major2";
     let majorName = document.getElementById(majorId).value;
@@ -171,6 +173,7 @@ function showMajor(majorNum = 2) {
     }
 }
 
+/* Shows the given course and assigns it the given class name. */
 function showCourse(course, className) {
     let courses = document.getElementById("courses");
 

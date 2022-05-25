@@ -1,4 +1,5 @@
 class Program {
+    /* UQ programs. */
     static programs = [
         new Program("Bachelor of Agricultural Science (Honours)", 2450, 16),
         new Program("Bachelor of Computer Science", 2451, 48),
@@ -19,22 +20,22 @@ class Program {
         this.units = units;
     }
 
+    /*
+     * Returns the program corresponding to the given number. If no such program
+     * exists, returns null.
+     */
     static getProgramByNumber(number) {
-        for (let program of this.programs) {
-            if (program.number == number) {
-                return program;
-            }
-        }
+        for (let program of this.programs) if (program.number == number) return program;
 
         return null;
     }
 
+    /*
+     * Returns the program corresponding to the given name. If no such program
+     * exists, returns null.
+     */
     static getProgramByName(name) {
-        for (let program of this.programs) {
-            if (program.name() == name) {
-                return program;
-            }
-        }
+        for (let program of this.programs) if (program.name() == name) return program;
 
         return null;
     }
