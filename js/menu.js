@@ -29,15 +29,6 @@ function hideMenu() {
     }
 }
 
-/* Toggles the visibility of the dropdown menu. */
-function toggleDropdown() {
-    if (document.getElementById("dropdown").style.display == "none") {
-        showDropdown();
-    } else {
-        hideDropdown();
-    }
-}
-
 /* Shows the dropdown menu. */
 function showDropdown() {
     document.getElementById("dropdown").style.display = "flex";

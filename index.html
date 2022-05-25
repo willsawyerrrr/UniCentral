@@ -15,9 +15,13 @@
             <a href="resources.html" class="menu">Resources</a>
             <a href="grades.html" class="menu">Grades</a>
             <a href="account.html" id="account" class="menu"><img src="images/account.jpg" alt="Account icon"></a>
-            <a onclick="toggleDropdown()" id="menu"><img src="images/menu.png" alt="Menu icon"></a>
+
+            <a  id="menu" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <img src="images/menu.png" alt="Menu icon">
+            </a>
         </header>
-        <div id="dropdown">
+        <div id="dropdown"
+            onmouseenter=showDropdown() onmouseleave=hideDropdown()>
             <a href="planners.html">Planners</a>
             <a href="resources.html">Resources</a>
             <a href="grades.html">Grades</a>
