@@ -1,15 +1,4 @@
 /* Beginning of program selector elements. */
- #content {
-    margin: auto;
-    margin-top: 1em;
-    margin-bottom: 2em;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 90%;
-}
-
 #program-selector, #info {
     flex-basis: 50%;
 }
