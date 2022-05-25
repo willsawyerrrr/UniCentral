@@ -1,0 +1,49 @@
+/* Beginning of content elements. */
+#content {
+    justify-content: space-around;
+    gap: 2em;
+}
+
+#content div {
+    padding: 0;
+    border: 3px solid #51247A; /* UQ Purple */
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    flex-basis: 45%;
+}
+
+#content a {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+#content img {
+    border-top-left-radius: 5px;
+    width: 100%;
+    margin: 0;
+}
+
+#content p {
+    background-color: #51247A; /* UQ Purple */
+    color: white;
+    padding: 2em;
+    margin-bottom: 0;
+}
+
+#content span {
+    color: rgba(255, 255, 255, 0.6);
+    font-variant: small-caps;
+    text-decoration: none;
+}
+/* End of content elements. */
+
+
+/* Beginning of screen size responsiveness. */
+/* Content windows increase size at 1000px. */
+@media only screen and (max-width: 1000px) {
+    #content div {
+        flex-basis: 90%;
+    }
+}
