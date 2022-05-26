@@ -1,6 +1,6 @@
 /* Beginning of content elements. */
 #content {
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 2em;
 }
 
@@ -37,6 +37,26 @@
     font-variant: small-caps;
     text-decoration: none;
 }
+
+/* Beginning of blurb elements. */
+#content #blurb {
+    flex-basis: 100%;
+}
+
+#blurb h1 {
+    background-color: #51247A; /* UQ Purple */
+    color: white;
+    padding: 1em;
+    margin: 0;
+}
+
+#blurb p {
+    background-color: white;
+    color: black;
+    margin: 0;
+    border-bottom-right-radius: 10px;
+}
+/* End of blurb elements. */
 /* End of content elements. */
 
 
