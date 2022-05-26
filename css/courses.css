@@ -1,0 +1,27 @@
+/* Beginning of course elements. */
+#content {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 2em;
+}
+
+.course {
+    flex-basis: 12em;
+}
+
+.course a {
+    text-decoration: none;
+}
+
+.course p {
+    font-size: smaller;
+    color: black;
+}
+
+.code {
+    font-weight: bold;
+}
+/* End of course elements. */

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>UniCentral | Courses</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/courses.css">
+        <script src="js/jquery-3.6.0.min.js"hidden></script>
+        <script src="js/onload.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/course.js"></script>
+        <script src="js/courses.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html" id="logo">UniCentral</a>
+            <a href="planners.html" class="menu">Planners</a>
+            <a href="courses.html?intention=resources" class="menu">Resources</a>
+            <a href="courses.html?intention=grades" class="menu">Grades</a>
+            <a href="account.html" id="account" class="menu"><img src="images/account.jpg" alt="Account icon"></a>
+
+            <a  id="menu" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <img src="images/menu.png" alt="Menu icon">
+            </a>
+        </header>
+        <div id="dropdown"
+            onmouseenter=showDropdown() onmouseleave=hideDropdown()>
+            <a href="planners.html">Planners</a>
+            <a href="courses.html?intention=resources">Resources</a>
+            <a href="courses.html?intention=grades">Grades</a>
+            <a href="account.html">Account</a>
+        </div>
+
+        <div id="path">
+            <a href="index.html"><img src="images/home.jpg" alt="Home icon"></a>
+            <p>&rsaquo;</p>
+            <a id="intention">x</a>
+        </div>
+
+        <div id="content"></div>
+
+        <footer>
+            <nav id="other">
+                <p>&copy; 2022, William Sawyer</p>
+                <a href="sitemap.html">Sitemap</a>
+                <a href="bug.html">Report a Bug</a>
+                <a href="improvement.html">Suggest an Improvement</a>
+            </nav>
+            <div id="social">
+                <a href="https://www.linkedin.com/in/willsawyerrrr" target="new"><img src="images/linkedin.png" alt="LinkedIn logo"></a>
+                <a href="https://github.com/willsawyerrrr" target="new"><img src="images/github.png" alt="GitHub logo"></a>
+                <a href="https://www.facebook.com/willsawyerrrr" target="new"><img src="images/facebook.png" alt="Facebook logo"></a>
+                <a href="https://twitter.com/willsawyerrrr" target="new"><img src="images/twitter.png" alt="Twitter logo"></a>
+            </div>
+        </footer>
+    </body>
+</html>
