@@ -54,8 +54,32 @@ class Course {
      */
     static getCourseFromURL() {
         let params = new URLSearchParams(window.location.search);
-        let code = params.get("course").toUpperCase();
+        let code = params.get("course");
 
         return this.getCourseByCode(code);
     }
+}
+
+/* Shows the given course and assigns it the given class name. */
+function showCourse(course, className) {
+    let courses = document.getElementById("courses");
+
+    let div = document.createElement("div");
+    div.classList.add("course");
+    if (className) div.classList.add(className);
+    div.id = course.code.toLowerCase();
+    courses.appendChild(div);
+
+    let link = document.createElement("a");
+    link.href = "https://my.uq.edu.au/programs-courses/course.html?course_code=" + course.code;
+    div.appendChild(link);
+
+    let code = document.createElement("p");
+    code.classList.add("code");
+    code.innerText = course.code;
+    link.appendChild(code);
+
+    let name = document.createElement("p");
+    name.innerText = course.name;
+    link.appendChild(name);
 }

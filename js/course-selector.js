@@ -172,22 +172,3 @@ function showMajor(majorNum = 2) {
         showCourse(course, className);
     }
 }
-
-/* Shows the given course and assigns it the given class name. */
-function showCourse(course, className) {
-    let courses = document.getElementById("courses");
-
-    let div = document.createElement("div");
-    div.classList.add("course");
-    div.classList.add(className);
-    courses.appendChild(div);
-
-    let code = document.createElement("a");
-    code.href = "https://my.uq.edu.au/programs-courses/course.html?course_code=" + course.code;
-    code.innerText = course.code;
-    div.appendChild(code);
-
-    let name = document.createElement("p");
-    name.innerText = course.name;
-    div.appendChild(name);
-}

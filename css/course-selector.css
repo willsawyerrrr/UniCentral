@@ -3,26 +3,12 @@
     flex-basis: 50%;
 }
 
-#program-selector select {
-    border: 2px solid lightgrey;
-    color: black;
-    border-radius: 2px;
-    width: 90%;
-    padding: 0.75em;
-    margin-top: 0.5em;
-    margin-bottom: 2em;
-}
-
 #program-selector input:first-child {
     margin-top: 0;
 }
 
 #program-selector input:last-child {
     margin-bottom: 0;
-}
-
-#program-selector input:focused {
-    border: 10px solid lightgrey;
 }
 
 #info {
@@ -38,29 +24,3 @@
     flex-basis: 50%;
 }
 /* End of program selector elements. */
-
-
-/* Beginning of course selector elements. */
-#courses {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    column-gap: 2em;
-}
-
-.course {
-    flex-basis: 12em;
-}
-
-.course a {
-    text-decoration: none;
-    font-weight: bold;
-    color: black;
-}
-
-.course p {
-    font-size: smaller;
-}
-/* End of course selector elements. */

@@ -132,6 +132,54 @@ header > a:hover {
     flex-wrap: wrap;
     width: 90%;
 }
+
+/* Beginning of input elements. */
+input, select {
+    border: 2px solid lightgrey;
+    color: black;
+    border-radius: 2px;
+    width: 90%;
+    padding: 0.75em;
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+input:focused, select:focused {
+    border: 10px solid lightgrey;
+}
+/* End of input elements. */
+
+/* Beginning of course elements. */
+#courses {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 2em;
+}
+
+.course {
+    flex-basis: 12em;
+}
+
+.course a {
+    text-decoration: none;
+    color: black;
+}
+
+.course p {
+    font-size: smaller;
+}
+
+.course p:first-child {
+    font-weight: bold;
+}
+
+.course p:last-child {
+    text-align: right;
+}
+/* End of course elements. */
 /* End of main content. */
 
 
