@@ -169,6 +169,6 @@ function showMajor(majorNum = 2) {
 
     let className = (majorNum == 1) ? "major1" : "major2";
     for (let course of major) {
-        showCourse(course, className);
+        showCourse(course, `https://my.uq.edu.au/programs-courses/course.html?course_code=${course.code}`, className);
     }
 }

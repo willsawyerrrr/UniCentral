@@ -13,6 +13,6 @@ function addCourses() {
     let content = document.getElementById("content");
     
     for (let course of Course.courses) {
-        showCourse(course);
+        showCourse(course, `${intention}.html?course=${course.code}`);
     }
 }

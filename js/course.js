@@ -61,7 +61,7 @@ class Course {
 }
 
 /* Shows the given course and assigns it the given class name. */
-function showCourse(course, className) {
+function showCourse(course, href, className = "") {
     let courses = document.getElementById("courses");
 
     let div = document.createElement("div");
@@ -71,7 +71,7 @@ function showCourse(course, className) {
     courses.appendChild(div);
 
     let link = document.createElement("a");
-    link.href = "https://my.uq.edu.au/programs-courses/course.html?course_code=" + course.code;
+    link.href = href;
     div.appendChild(link);
 
     let code = document.createElement("p");
