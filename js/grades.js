@@ -27,6 +27,7 @@ function addAssessment(name = "", weight = 0, mark = 0) {
     content.appendChild(outer);
 
     let title = document.createElement("h3");
+    title.classList.add("title");
     title.innerText = `Assessment Item ${++numAssessments}`;
     outer.appendChild(title);
 
@@ -91,4 +92,11 @@ function addAssessment(name = "", weight = 0, mark = 0) {
  */
 function hideAssessment() {
     this.parentElement.remove();
+
+    let assessments = document.getElementsByClassName("title");
+
+    numAssessments = 0;
+    for (let assessment of assessments) {
+        assessment.innerText = `Assessment Item ${++numAssessments}`;
+    }
 }
