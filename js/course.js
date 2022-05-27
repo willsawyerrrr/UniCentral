@@ -1,3 +1,30 @@
+class Assessment {
+    /* The name of this assessment item. */
+    #name;
+    /* The weighting of this assessment item. */
+    #weighting;
+    /* The mark earned on this assessment item, out of 100. */
+    #mark;
+
+    constructor(name, weighting, mark) {
+        this.#name = name;
+        this.#weighting = weighting;
+        this.#mark = mark;
+    }
+
+    get name() {
+        return this.#name;
+    }
+
+    get weighting() {
+        return this.#weighting;
+    }
+
+    get mark() {
+        return this.#mark;
+    }
+}
+
 class Course {
     /* The code for this course. */
     #code;
@@ -21,9 +48,29 @@ class Course {
         new Course("INFS1200", "Introduction to Information Systems", 2021, 2),
         new Course("MATH1061", "Discrete Mathematics", 2021, 2),
         
-        new Course("COMP2048", "Theory of Computing", 2022, 1),
-        new Course("CSSE2310", "Computer Systems Principles & Programming", 2022, 1),
-        new Course("DECO1400", "Introduction to Web Design", 2022, 1)
+        new Course("COMP2048", "Theory of Computing", 2022, 1, [
+            new Assessment("Codebreaking Laboratory", 15, 100),
+            new Assessment("Game of Life Laboratory", 15, 14.5/15*100),
+            new Assessment("Project", 30, 0),
+            new Assessment("Quiz", 10, 100),
+            new Assessment("Final Exam", 30, 0)
+        ]),
+        new Course("CSSE2310", "Computer Systems Principles & Programming", 2022, 1, [
+            new Assessment("Assignment 1", 15, 23.15/65*100),
+            new Assessment("Assignment 2", 15, 49/50*100),
+            new Assessment("Assignment 3", 15, 0),
+            new Assessment("Assignment 4", 15, 0),
+            new Assessment("Final Exam", 40, 0)
+        ]),
+        new Course("DECO1400", "Introduction to Web Design", 2022, 1, [
+            new Assessment("Quiz 1", 10, 100),
+            new Assessment("Quiz 2", 10, 100),
+            new Assessment("Peerwise", 10, 0),
+            new Assessment("Design Report", 20, 0),
+            new Assessment("Website Implementation", 33, 0),
+            new Assessment("Report", 7, 0),
+            new Assessment("Presentation", 10, 0)
+        ])
     ]
 
     constructor(code, name, year, semester, assessments = []) {
@@ -31,6 +78,7 @@ class Course {
         this.#name = name;
         this.#year = year;
         this.#semester = semester;
+        this.#assessments = assessments;
     }
 
     get code() {
@@ -49,13 +97,17 @@ class Course {
         return this.#semester;
     }
     
+    get assessments() {
+        return this.#assessments;
+    }
+
     /*
      * Returns the course corresponding to the given code. If no such course
      * exists, returns null.
      */
     static getCourseByCode(code) {
         for (let course of this.courses) {
-            if (course.code == code) {
+            if (course.code == code.toUpperCase()) {
                 return course;
             }
         }
@@ -97,7 +149,9 @@ function showCourse(course, href, className = "") {
 
     let div = document.createElement("div");
     div.classList.add("course");
-    if (className) div.classList.add(className);
+    if (className) {
+        div.classList.add(className);
+    }
     div.id = course.code.toLowerCase();
     courses.appendChild(div);
 

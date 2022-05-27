@@ -1,0 +1,87 @@
+#content {
+    justify-content: space-around;
+    margin-top: 0;
+}
+
+.assessment-outer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    margin-bottom: 2em;
+}
+
+#content h3 {
+    width: 100%;
+}
+
+.assessment-inner {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+.assessment-inner * {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.assessment-inner p {
+    font-size: smaller;
+}
+
+.name {
+    flex-basis: 100%;
+    display: flex;
+}
+
+.name p {
+    width: 25%;
+}
+
+.name input {
+    width: 75%;
+}
+
+.weight,
+.mark {
+    flex-basis: 50%;
+    display: flex;
+    column-gap: 4%;
+}
+
+.weight {
+    justify-content: flex-start;
+}
+
+.mark {
+    justify-content: flex-end;
+}
+
+.weight p,
+.mark p {
+    flex-basis: 44%;
+}
+
+.weight > input,
+.mark > input {
+    flex-basis: 30%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .assessment-outer {
+        flex-basis: 45%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #content {
+        justify-content: space-around;
+    }
+
+    .assessment-outer {
+        flex-basis: 90%;
+    }
+}
