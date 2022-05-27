@@ -35,6 +35,7 @@ function showAssessments() {
     }
 }
 
+/* Creates an assessment element with the given name, weight and mark. */
 function addAssessment(name = "", weight = 0, mark = 0) {
     let content = document.getElementById("content");
 
@@ -45,6 +46,14 @@ function addAssessment(name = "", weight = 0, mark = 0) {
     let title = document.createElement("h3");
     title.innerText = `Assessment Item ${++numAssessments}`;
     outer.appendChild(title);
+
+    /* Close button - credit to: 
+            https://www.w3schools.com/howto/howto_css_contact_chips.asp. */
+    let close = document.createElement("span");
+    close.classList.add("close");
+    close.innerHTML = "&times;";
+    close.onclick = hideAssessment;
+    outer.appendChild(close);
 
     let inner = document.createElement("div");
     inner.classList.add("assessment-inner");
@@ -91,4 +100,12 @@ function addAssessment(name = "", weight = 0, mark = 0) {
     markInput.placeholder = "0";
     markInput.value = mark;
     markElem.appendChild(markInput);
+}
+
+/*
+ * Hides the assessment element corresponsing to the close button whose click
+ * called this method.
+ */
+function hideAssessment() {
+    this.parentElement.remove();
 }
