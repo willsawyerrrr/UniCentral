@@ -99,4 +99,8 @@ function hideAssessment() {
     for (let assessment of assessments) {
         assessment.innerText = `Assessment Item ${++numAssessments}`;
     }
+
+    if (numAssessments == 0) {
+        addAssessment();
+    }
 }
