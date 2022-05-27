@@ -25,6 +25,11 @@ function setPath() {
 
 /* Shows the appropriate grade elements for the current course. */
 function showAssessments() {
+    if (course.assessments.length == 0) {
+        addAssessment();
+        return;
+    }
+    
     for (let assessment of course.assessments) {
         addAssessment(assessment.name, assessment.weighting, assessment.mark);
     }
