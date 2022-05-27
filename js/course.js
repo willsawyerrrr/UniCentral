@@ -9,7 +9,7 @@ class Assessment {
     constructor(name, weighting, mark) {
         this.#name = name;
         this.#weighting = weighting;
-        this.#mark = mark;
+        this.#mark = Math.round(mark * 100) / 100;
     }
 
     get name() {
