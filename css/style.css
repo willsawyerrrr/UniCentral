@@ -282,7 +282,12 @@ footer {
 
 /* Footer text changes to one column at 600px. */
 @media only screen and (max-width: 600px) {
+    #sem-caret, #semester {
+        display: none;
+    }
+
     #other {
         flex-direction: column;
     }
 }
+/* End of screen size responsiveness. */
