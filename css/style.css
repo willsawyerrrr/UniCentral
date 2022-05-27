@@ -280,12 +280,13 @@ footer {
     }
 }
 
-/* Footer text changes to one column at 600px. */
 @media only screen and (max-width: 600px) {
+    /* Truncate path at 600px. */
     #sem-caret, #semester {
         display: none;
     }
 
+    /* Footer text changes to one column at 600px. */
     #other {
         flex-direction: column;
     }
