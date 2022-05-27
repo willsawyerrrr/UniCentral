@@ -19,16 +19,30 @@ function programSelected() {
     let duration = document.getElementById("duration");
 
     let notYet = document.getElementById("not-yet");
-    if (notYet) notYet.remove();
+    if (notYet) {
+        notYet.remove();
+    }
 
     let coreCourses = document.getElementsByClassName("core");
-    if (coreCourses) while (coreCourses[0]) coreCourses[0].remove();
+    if (coreCourses) {
+        while (coreCourses[0]) {
+            coreCourses[0].remove();
+        }
+    }
 
     let major1courses = document.getElementsByClassName("major1");
-    if (major1courses) while (major1courses[0]) major1courses[0].remove();
+    if (major1courses) {
+        while (major1courses[0]) {
+            major1courses[0].remove();
+        }
+    }
 
     let major2courses = document.getElementsByClassName("major2");
-    if (major2courses) while (major2courses[0]) major2courses[0].remove();
+    if (major2courses) {
+        while (major2courses[0]) {
+            major2courses[0].remove();
+        }
+    }
 
     let input = selector.value;
     let program = Program.getProgramByNumber(input.slice(0, 4));
@@ -86,13 +100,23 @@ function firstMajorSelected() {
     let input = major1.value;
 
     let major2 = document.getElementById("major2");
-    if (major2) major2.remove();
+    if (major2) {
+        major2.remove();
+    }
 
     let major1courses = document.getElementsByClassName("major1");
-    if (major1courses) while (major1courses[0]) major1courses[0].remove();
+    if (major1courses) {
+        while (major1courses[0]) {
+            major1courses[0].remove();
+        }
+    }
 
     let major2courses = document.getElementsByClassName("major2");
-    if (major2courses) while (major2courses[0]) major2courses[0].remove();
+    if (major2courses) {
+        while (major2courses[0]) {
+            major2courses[0].remove();
+        }
+    }
 
     if (input != "None") {
         showMajor(1);
@@ -116,7 +140,9 @@ function firstMajorSelected() {
         let restricted = JSON.parse(JSON.stringify(majors));
         let i;
         for (i = 0; i < restricted.length; i++) {
-            if (restricted[i] == input) break;
+            if (restricted[i] == input) {
+                break;
+            }
         }
         restricted.splice(i, 1);
 
@@ -131,7 +157,9 @@ function firstMajorSelected() {
 
 /* Show core courses for the given program. */
 function showCore(program) {
-    if (program.number != 2451) return;
+    if (program.number != 2451) {
+        return;
+    }
 
     for (let course of core) {
         showCourse(course, "core");
@@ -165,7 +193,11 @@ function showMajor(majorNum = 2) {
     }
 
     let major2courses = document.getElementsByClassName("major2");
-    if (major2courses) while (major2courses[0]) major2courses[0].remove();
+    if (major2courses) {
+        while (major2courses[0]) {
+            major2courses[0].remove();
+        }
+    }
 
     let className = (majorNum == 1) ? "major1" : "major2";
     for (let course of major) {

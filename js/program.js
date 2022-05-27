@@ -1,4 +1,11 @@
 class Program {
+    /* The name of this program. */
+    #name;
+    /* The number of this program. */
+    #number;
+    /* The number of units required to complete this program. */
+    #units;
+
     /* UQ programs. */
     static programs = [
         new Program("Bachelor of Agricultural Science (Honours)", 2450, 16),
@@ -15,9 +22,21 @@ class Program {
     ];
 
     constructor(name, number, units) {
-        this.name = name;
-        this.number = number;
-        this.units = units;
+        this.#name = name;
+        this.#number = number;
+        this.#units = units;
+    }
+
+    get name() {
+        return this.#name;
+    }
+
+    get number() {
+        return this.#number;
+    }
+
+    get units() {
+        return this.#units;
     }
 
     /*
@@ -25,7 +44,11 @@ class Program {
      * exists, returns null.
      */
     static getProgramByNumber(number) {
-        for (let program of this.programs) if (program.number == number) return program;
+        for (let program of this.programs) {
+            if (program.number == number) {
+                return program;
+            }
+        }
 
         return null;
     }
@@ -35,7 +58,11 @@ class Program {
      * exists, returns null.
      */
     static getProgramByName(name) {
-        for (let program of this.programs) if (program.name() == name) return program;
+        for (let program of this.programs) {
+            if (program.name == name) {
+                return program;
+            }
+        }
 
         return null;
     }

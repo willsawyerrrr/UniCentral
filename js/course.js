@@ -1,4 +1,15 @@
 class Course {
+    /* The code for this course. */
+    #code;
+    /* The name of this course. */
+    #name;
+    /* The year this course was studied. */
+    #year;
+    /* The semester this course as studied. */
+    #semester;
+    /* The assessments completed for this course. */
+    #assessments;
+
     /* Courses I have studied to date. */
     static courses = [
         new Course("ENGG1001", "Programming for Engineers", 2021, 1),
@@ -15,19 +26,39 @@ class Course {
         new Course("DECO1400", "Introduction to Web Design", 2022, 1)
     ]
 
-    constructor(code, name, year, semester) {
-        this.code = code;
-        this.name = name;
-        this.year = year;
-        this.semester = semester;
+    constructor(code, name, year, semester, assessments = []) {
+        this.#code = code;
+        this.#name = name;
+        this.#year = year;
+        this.#semester = semester;
     }
 
+    get code() {
+        return this.#code;
+    }
+
+    get name() {
+        return this.#name;
+    }
+    
+    get year() {
+        return this.#year;
+    }
+    
+    get semester() {
+        return this.#semester;
+    }
+    
     /*
      * Returns the course corresponding to the given code. If no such course
      * exists, returns null.
      */
     static getCourseByCode(code) {
-        for (let course of this.courses) if (course.code == code) return course;
+        for (let course of this.courses) {
+            if (course.code == code) {
+                return course;
+            }
+        }
 
         return null;
     }
