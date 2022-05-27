@@ -63,6 +63,10 @@
 /* Beginning of screen size responsiveness. */
 /* Content windows increase size at 1000px. */
 @media only screen and (max-width: 1000px) {
+    #content {
+        justify-content: space-around;
+    }
+
     #content div {
         flex-basis: 90%;
     }
