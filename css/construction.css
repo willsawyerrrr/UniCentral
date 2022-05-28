@@ -1,0 +1,80 @@
+header, footer {
+    background: rgba(255, 255, 255, 0.4);
+    border-bottom: 5px solid #51247A; /* UQ Purple */
+    border-top: 5px solid #51247A; /* UQ Purple */
+}
+
+body {
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4) 50px,
+        rgba(255, 165, 0, 0.4) 50px,
+        rgba(255, 165, 0, 0.4) 100px,
+        rgba(0, 0, 0, 0.4) 100px
+    );
+}
+
+header > a {
+    border-top: 4px solid #51247A; /* UQ Purple */
+    border-bottom: 4px solid #51247A; /* UQ Purple */
+    background-color: white;
+    color: black;
+}
+
+header > a:hover {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#content {
+    border: 5px solid #51247A; /* UQ Purple */
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+    margin-top: 2em;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#left {
+    flex-basis: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+#right {
+    flex-basis: 40%;
+    justify-content: center;
+}
+
+#url {
+    color:rgba(0, 0, 0, 0.6);
+}
+
+#content p {
+    padding: 3em;
+    margin: auto;
+    font-size: larger;
+    text-align: justify;
+}
+
+#content button {
+    background-color: #51247A; /* UQ Purple */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 20%;
+    padding: 0.5em;
+    margin: auto;
+    margin-bottom: 3em;
+    font-size: larger;
+}
+
+#content img {
+    object-fit: contain;
+    width: 50%;
+    margin: 2em;
+    padding: 0;
+}
