@@ -13,6 +13,7 @@
 }
 
 #content a {
+    text-decoration: none;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -29,6 +30,7 @@
     background-color: #51247A; /* UQ Purple */
     color: white;
     padding: 2em;
+    margin-top: 0;
     margin-bottom: 0;
 }
 
