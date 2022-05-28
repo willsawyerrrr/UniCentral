@@ -22,6 +22,7 @@
 
 #content img {
     border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
     width: 100%;
     margin: 0;
 }
