@@ -7,6 +7,9 @@ let course = Course.getCourseFromURL();
  *      *home icon*  >  Semester *sem*, *year*  >  *course code* *intention*
  * Where sem, year and course code are the semester, year and code attributes of
  * the course object; and intention is either Grades or Resources.
+ * 
+ * Also sets the title of the page to:
+ *      UniCentral | *course code* *intention*
  */
 function makePath(intention) {
     document.title = `UniCental | ${course.code} ${intention}`;
