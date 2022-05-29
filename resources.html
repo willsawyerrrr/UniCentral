@@ -4,6 +4,7 @@
         <title></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/resources.css">
         <script src="js/jquery-3.6.0.min.js"hidden></script>
         <script src="js/onload.js"></script>
         <script src="js/menu.js"></script>
@@ -33,10 +34,50 @@
 
         <div id="path"></div>
 
-        <!-- Body content -->
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
-        <br><br><br><br><br><br><br><br><br><br>
+        <div id="content">
+            <div id="links">
+                <button class="collapsible" onclick="expand(this)">
+                    <p>Links</p>
+                    <p class="icon">&plus;</p>
+                </button>
+                <ul>
+                    <a href="https://course-profiles.uq.edu.au/student_section_loader/section_1/119834?_ga=2.38404771.1405628714.1644367246-1553012503.1636712171" target="_new"><img class="link">Electronic Course Profile</a>
+                    <a href="https://learn.uq.edu.au/webapps/blackboard/execute/announcement?method=search&context=course_entry&course_id=_157177_1&handle=announcements_entry&mode=view" target="_new"><img class="link">Blackboard</a>
+                    <a href="https://edstem.org/au/courses/7528/discussion/" target="_new"><img class="link">Discussion Forum - EdStem</a>
+                    <a href="https://iwd2022.notion.site/DECO1400-7140-Semester-1-2022-b50601a10bc94ef7ab2df48045086da1" target="_new"><img class="link">Practicals</a>
+                    <a href="https://miro.com/app/board/uXjVOKS0ZQ4=/" target="_new"><img class="link">Miro</a>
+                </ul>
+            </div>
+
+            <div id="assessments">
+                <button class="collapsible" onclick="expand(this)">
+                    <p>Assessments</p>
+                    <p class="icon">&plus;</p>
+                </button>
+                <ul>
+                    <a href="files/WebsiteDesignReportRubric.pdf" target="_new"><img class="file">Design Report Rubric</a>
+                    <a href="files/WebsiteImplementationRubric.pdf" target="_new"><img class="file">Implementation Rubric</a>
+                </ul>
+            </div>
+
+            <div id="lectures">
+                <button class="collapsible" onclick="expand(this)">
+                    <p>Lecture Slides</picon>
+                    <p class="icon">&plus;</p>
+                </button>
+                <ul>
+                    <a href="files/DECO1400Lecture1.pdf" target="_blank"><img class="file">Lecture 1</a>
+                    <a href="files/DECO1400Lecture2.pdf" target="_new"><img class="file">Lecture 2</a>
+                    <a href="files/DECO1400Lecture3.pdf" target="_new"><img class="file">Lecture 3</a>
+                    <a href="files/DECO1400Lecture4.pdf" target="_new"><img class="file">Lecture 4</a>
+                    <a href="files/DECO1400Lecture5.pdf" target="_new"><img class="file">Lecture 5</a>
+                    <a href="files/DECO1400Lecture6.pdf" target="_new"><img class="file">Lecture 6</a>
+                    <a href="files/DECO1400Lecture9.pdf" target="_new"><img class="file">Lecture 9</a>
+                    <a href="files/DECO1400Lecture10.pdf" target="_new"><img class="file">Lecture 10</a>
+                    <a href="files/DECO1400Lecture11.pdf" target="_new"><img class="file">Lecture 11</a>
+                </ul>
+            </div>
+        </div>
 
         <footer>
             <nav id="other">
