@@ -1,11 +1,21 @@
 #content {
+    flex-direction: column;
+}
+
+.title {
+    width: 90%;
+}
+
+/* Beginning of assessment elements. */
+#assessments {
+    width: 100%;
+    display: flex;
     justify-content: flex-start;
-    margin-top: 0;
+    flex-wrap: wrap;
     column-gap: 3em;
 }
 
 .assessment-outer {
-    flex-basis: 30%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,25 +23,22 @@
     margin-bottom: 2em;
 }
 
-#content h3 {
-    width: 90%;
-}
-
 /* Beginning of close button - credit to: 
-            https://www.w3schools.com/howto/howto_css_contact_chips.asp. */
+        https://www.w3schools.com/howto/howto_css_contact_chips.asp. */
 .close {
     color: #888;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
     margin: auto;
- }
+}
   
 .close:hover {
     color: #000;
- }
- /* End of close button. */
+}
+/* End of close button. */
 
+/* Beginning of internal assessment container. */
 .assessment-inner {
     flex-basis: 100%;
     display: flex;
@@ -87,15 +94,112 @@
 .mark > input {
     flex-basis: 30%;
 }
+/* End of internal assessment container. */
+/* End of assessment elements. */
 
+/* Beginning of mark/grade text and buttons. */
+#results {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+
+#text {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 2em;
+}
+
+#text p {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#action {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 2em;
+}
+
+button {
+    width: 10em;
+    height: 3em;
+    margin: auto 0;
+    border: 2px solid rgba(80, 36, 122, 0.6); /* UQ Purple */
+    border-radius: 3px;
+}
+
+#add, #calculate {
+    background-color: rgb(80, 36, 122); /* UQ Purple */
+    color: white;
+}
+
+#add {
+    font-size: xx-large;
+    line-height: 0;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 50%;
+    margin-right: 2em;
+    padding: 0;
+}
+
+#save {
+    background-color: white;
+    color: rgb(80, 36, 122); /* UQ Purple */
+
+}
+
+#add:active, #calculate:active {
+    background-color: #34174F;
+}
+
+#save:active {
+    background-color: #E6E6E6;
+}
+/* End of calculate/save buttons. */
+
+
+/* Beginning of screen size responsiveness. */
 @media only screen and (max-width: 1200px) {
-    .assessment-outer {
-        flex-basis: 45%;
+    #results {
+        flex-direction: column;
+    }
+
+    #text {
+        justify-content: flex-start;
+        column-gap: 5em;
     }
 }
 
 @media only screen and (max-width: 800px) {
     .assessment-outer {
-        flex-basis: 100%;
+        max-width: 100%;
+        width: 45%;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    #text p {
+        font-size: 1.25em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .assessment-outer {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #add {
+        margin-right: auto;
+    }
+}
+/* End of screen size responsiveness. */

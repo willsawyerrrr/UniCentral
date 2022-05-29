@@ -19,12 +19,12 @@ function showAssessments() {
 }
 
 /* Creates an assessment element with the given name, weight and mark. */
-function addAssessment(name = "", weight = 0, mark = 0) {
-    let content = document.getElementById("content");
+function addAssessment(name = "", weight = null, mark = null) {
+    let container = document.getElementById("assessments");
 
     let outer = document.createElement("div");
     outer.classList.add("assessment-outer");
-    content.appendChild(outer);
+    container.appendChild(outer);
 
     let title = document.createElement("h3");
     title.classList.add("title");
@@ -36,7 +36,7 @@ function addAssessment(name = "", weight = 0, mark = 0) {
     let close = document.createElement("span");
     close.classList.add("close");
     close.innerHTML = "&times;";
-    close.onclick = hideAssessment;
+    close.onclick = deleteAssessment;
     outer.appendChild(close);
 
     let inner = document.createElement("div");
@@ -87,10 +87,10 @@ function addAssessment(name = "", weight = 0, mark = 0) {
 }
 
 /*
- * Hides the assessment element corresponsing to the close button whose click
+ * Deletes the assessment element corresponsing to the close button whose click
  * called this method.
  */
-function hideAssessment() {
+function deleteAssessment() {
     this.parentElement.remove();
 
     let assessments = document.getElementsByClassName("title");
@@ -102,5 +102,55 @@ function hideAssessment() {
 
     if (numAssessments == 0) {
         addAssessment();
+    }
+}
+
+/* Calculates and displays the overall assessment mark and grade. */
+function calculate() {
+    let totalWeight = 0;
+    let overallMark = 0;
+
+    let assessments = document.getElementsByClassName("assessment-inner");
+    for (let assessment of assessments) {
+        let weightElem = assessment.getElementsByClassName("weight")[0];
+        let weight = weightElem.getElementsByTagName("input")[0].value;
+
+        let markElem = assessment.getElementsByClassName("mark")[0];
+        let mark = markElem.getElementsByTagName("input")[0].value;
+
+        totalWeight += weight;
+        overallMark += weight * mark;
+    }
+
+    overallMark /= 100; // make out of 100
+    let grade = markToGrade(overallMark);
+
+    let mark = document.getElementById("mark");
+    mark.innerHTML = `Overall Mark: &emsp; ${overallMark}%`;
+
+    let gradeElem = document.getElementById("grade");
+    gradeElem.innerHTML = `Grade: &emsp; ${grade.number} - ${grade.   name}`
+}
+
+/* Saves the entered assessment items and their marks to the user's profile. */
+function saveMarks() {
+    // not yet implemented
+}
+
+function markToGrade(mark) {
+    if (mark >= 85) {
+        return {number: 7, name: "High Distinction"};
+    } else if (mark >= 75) {
+        return {number: 6, name: "Distinction"};
+    } else if (mark >= 65) {
+        return {number: 5, name: "Credit"};
+    } else if (mark >= 50) {
+        return {number: 4, name: "Pass"};
+    } else if (mark >= 45) {
+        return {number: 3, name: "Marginal Fail"};
+    } else if (mark >= 20) {
+        return {number: 2, name: "Fail"};
+    } else {
+        return {number: 1, name: "Low Fail"};
     }
 }

@@ -34,7 +34,20 @@
 
         <div id="path"></div>
 
-        <div id="content"></div>
+        <div id="content">
+            <div id="assessments"></div>
+            <div id="results">
+                <div id="text">
+                    <p id="mark"></p>
+                    <p id="grade"></p>
+                </div>
+                <div id="action">
+                    <button id="add" onclick="addAssessment()">&plus;</button>
+                    <button id="calculate" onclick="calculate()">Calculate Grade</button>
+                    <button id="save" onclick="saveMarks()">Save Marks</button>
+                </div>
+            </div>
+        </div>
 
         <footer>
             <nav id="other">
