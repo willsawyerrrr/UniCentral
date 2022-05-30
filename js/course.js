@@ -143,7 +143,10 @@ class Course {
     }
 }
 
-/* Shows the given course and assigns it the given class name. */
+/*
+ * Shows the given course and assigns it the given hyperlink reference and
+ * class name.
+ */
 function showCourse(course, href, className = "") {
     let courses = document.getElementById("courses");
 
