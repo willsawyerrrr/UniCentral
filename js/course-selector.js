@@ -162,7 +162,7 @@ function showCore(program) {
     }
 
     for (let course of core) {
-        showCourse(course, "core");
+        showCourse(course, `https://my.uq.edu.au/programs-courses/course.html?course_code=${course.code}`, "core");
     }
 }
 
